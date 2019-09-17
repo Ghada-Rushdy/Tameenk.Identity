@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Tameenk.Identity.DAL;
 
+
 namespace Tameenk.Identity.Individual.Component
 {
     public class Login
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private UserManager<ApplicationUser> _userManager;
+        private SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration; 
 
-        public Login(SignInManager<IdentityUser> signInManager
-            , UserManager<IdentityUser> userManager, IConfiguration configuration)
+        public Login(SignInManager<ApplicationUser> signInManager
+            , UserManager<ApplicationUser> userManager , IConfiguration configuration)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -37,19 +38,8 @@ namespace Tameenk.Identity.Individual.Component
 
                     if (result.Succeeded)
                     {
-                        var claims = new[]
-                        {
-                          new Claim(JwtRegisteredClaimNames.Sub, user.Id),                          
-                          new Claim(JwtRegisteredClaimNames.Email, user.Email)                  
-                        };
-
-                        var secrectkey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Tokens:Key"]));
-                        var creds = new SigningCredentials(secrectkey, SecurityAlgorithms.HmacSha256);
-
-                        JwtSecurityToken token = new JwtSecurityToken(_configuration["Tokens:Issuer"],
-                          _configuration["Tokens:Issuer"],
-                          claims,                         
-                          signingCredentials: creds);
+                        GenerateToken generateToken = new GenerateToken(_configuration);
+                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id,user.Email);
 
                         output.ErrorCode = LoginOutput.ErrorCodes.Success;
                         output.ErrorDescription = "Success authenticated User";

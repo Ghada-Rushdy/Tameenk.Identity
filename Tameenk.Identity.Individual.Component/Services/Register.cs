@@ -15,19 +15,16 @@ namespace Tameenk.Identity.Individual.Component
 {
     public class Register
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private UserManager<IdentityUser> _userManager;
+        private UserManager<ApplicationUser> _userManager;
+        private SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
 
-        public Register(SignInManager<IdentityUser> signInManager
-            , UserManager<IdentityUser> userManager,
-            IConfiguration configuration)
+        public Register(SignInManager<ApplicationUser> signInManager
+            , UserManager<ApplicationUser> userManager, IConfiguration configuration)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _configuration = configuration;
-
-
         }
 
         public async Task<IndividualRegisterOutput> UserRegister(IndividualRegisterModel model)
@@ -36,7 +33,7 @@ namespace Tameenk.Identity.Individual.Component
 
             try
             {
-                var user = new AspNetUsers
+                var user = new ApplicationUser
                 {
                     Email = model.Email,
                     EmailConfirmed = true,
@@ -83,7 +80,8 @@ namespace Tameenk.Identity.Individual.Component
                         var claims = new[]
                             {
                           new Claim(JwtRegisteredClaimNames.Sub, user.Id),                          
-                          new Claim(JwtRegisteredClaimNames.Email, user.Email)                        
+                          new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                          new Claim(JwtRegisteredClaimNames.AuthTime, DateTime.Now.ToString())
                         };
 
                         var secrectkey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Tokens:Key"]));
@@ -122,7 +120,7 @@ namespace Tameenk.Identity.Individual.Component
 
         }
 
-        public async Task<bool> SendTwoFactorCodeSmsAsync(AspNetUsers userId, string phoneNumber)
+        public async Task<bool> SendTwoFactorCodeSmsAsync(ApplicationUser userId, string phoneNumber)
         {
             try
             {

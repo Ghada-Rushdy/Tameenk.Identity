@@ -1427,7 +1427,8 @@
           "Microsoft.EntityFrameworkCore.Design": "2.2.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
           "Microsoft.Extensions.Configuration": "2.2.0",
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.2",
+          "System.IdentityModel.Tokens.Jwt": "5.5.0"
         },
         "compile": {
           "bin/placeholder/Tameenk.Identity.DAL.dll": {}
@@ -4740,11 +4741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SSO\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
+      "projectUniqueName": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
       "projectName": "Tameenk.Identity.Company.Component",
-      "projectPath": "D:\\SSO\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
+      "projectPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
       "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
-      "outputPath": "D:\\SSO\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\obj\\",
+      "outputPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4763,8 +4764,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\SSO\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj": {
-              "projectPath": "D:\\SSO\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj"
+            "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj": {
+              "projectPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj"
             }
           }
         }

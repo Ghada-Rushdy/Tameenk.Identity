@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Tameenk.Identity.API-D69F6F23-16AE-4A1E-8FBD-68B2B6E14B9A")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tameenk.Identity.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -3,21 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tameenk.Identity.DAL;
 
-namespace Tameenk.Identity.DAL.Migrations
+namespace Tameenk.Identity.API.Migrations
 {
-    [DbContext(typeof(TameenkIdentityDbContext))]
-    [Migration("20190917064200_merge")]
-    partial class merge
+    [DbContext(typeof(AuthenticationContext))]
+    partial class AuthenticationContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
+                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -75,6 +73,9 @@ namespace Tameenk.Identity.DAL.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -114,6 +115,8 @@ namespace Tameenk.Identity.DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -184,6 +187,33 @@ namespace Tameenk.Identity.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Tameenk.Identity.API.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("CompanyCrNumber");
+
+                    b.Property<string>("CompanySponserId");
+
+                    b.Property<string>("CompanyVatNumber");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<bool>("IsCompany");
+
+                    b.Property<Guid>("LanguageId");
+
+                    b.Property<DateTime>("LastLoginDate");
+
+                    b.Property<DateTime>("LastModifiedDate");
+
+                    b.Property<Guid>("RoleId");
+
+                    b.Property<string>("Token");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

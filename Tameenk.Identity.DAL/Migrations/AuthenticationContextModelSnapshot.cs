@@ -8,8 +8,8 @@ using Tameenk.Identity.DAL;
 
 namespace Tameenk.Identity.DAL.Migrations
 {
-    [DbContext(typeof(TameenkIdentityDbContext))]
-    partial class TameenkIdentityDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AuthenticationContext))]
+    partial class AuthenticationContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -73,6 +73,9 @@ namespace Tameenk.Identity.DAL.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -112,6 +115,8 @@ namespace Tameenk.Identity.DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -182,6 +187,33 @@ namespace Tameenk.Identity.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Tameenk.Identity.DAL.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("CompanyCrNumber");
+
+                    b.Property<string>("CompanySponserId");
+
+                    b.Property<string>("CompanyVatNumber");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<bool>("IsCompany");
+
+                    b.Property<Guid>("LanguageId");
+
+                    b.Property<DateTime>("LastLoginDate");
+
+                    b.Property<DateTime>("LastModifiedDate");
+
+                    b.Property<Guid>("RoleId");
+
+                    b.Property<string>("Token");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Tameenk.Identity.DAL.Migrations
+namespace Tameenk.Identity.API.Migrations
 {
-    public partial class merge : Migration
+    public partial class IntialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,7 +40,18 @@ namespace Tameenk.Identity.DAL.Migrations
                     TwoFactorEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false)
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    Discriminator = table.Column<string>(nullable: false),
+                    Token = table.Column<string>(nullable: true),
+                    CompanyCrNumber = table.Column<string>(nullable: true),
+                    CompanyVatNumber = table.Column<string>(nullable: true),
+                    CompanySponserId = table.Column<string>(nullable: true),
+                    LanguageId = table.Column<Guid>(nullable: true),
+                    RoleId = table.Column<Guid>(nullable: true),
+                    IsCompany = table.Column<bool>(nullable: true),
+                    CreatedDate = table.Column<DateTime>(nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(nullable: true),
+                    LastLoginDate = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
