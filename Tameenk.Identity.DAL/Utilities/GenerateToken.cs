@@ -15,7 +15,6 @@ namespace Tameenk.Identity.DAL
         public GenerateToken(IConfiguration configuration)
         {
             _configuration = configuration;
-
         }
 
         public JwtSecurityToken GenerateTokenJWT(string ID, string Email)
