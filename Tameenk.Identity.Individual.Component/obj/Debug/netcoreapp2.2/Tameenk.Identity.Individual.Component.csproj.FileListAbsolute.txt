@@ -1,0 +1,17 @@
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.deps.json
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.dll
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.pdb
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csprojAssemblyReference.cache
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csproj.CoreCompileInputs.cache
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.AssemblyInfoInputs.cache
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.AssemblyInfo.cs
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.dll
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.pdb
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csproj.CopyComplete
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Ar\Tameenk.Identity.Individual.Component.resources.dll
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.Resources.VerificationCodeResource.resources
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.Resources.VerificationCodeResource.Ar.resources
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csproj.GenerateResource.cache
+D:\SSO\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Ar\Tameenk.Identity.Individual.Component.resources.dll

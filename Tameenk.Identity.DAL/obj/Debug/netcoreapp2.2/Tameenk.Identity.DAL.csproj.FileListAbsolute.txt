@@ -1,0 +1,11 @@
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.deps.json
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.csproj.CoreCompileInputs.cache
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfoInputs.cache
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfo.cs
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.runtimeconfig.json
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.runtimeconfig.dev.json
+D:\SSO\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.csprojAssemblyReference.cache
