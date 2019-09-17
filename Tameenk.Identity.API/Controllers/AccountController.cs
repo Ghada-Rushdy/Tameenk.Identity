@@ -107,10 +107,14 @@ namespace Tameenk.Identity.API.Controllers
         [HttpPost]
         [Route("LogoutUser")]
         [AllowAnonymous]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> LogoutUser()
         {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "User");
+            LogOutOutput logOutOutput = new LogOutOutput();
+
+            Logout logout = new Logout(_signInManager);
+            logOutOutput = await logout.UserLogOut();
+
+            return Ok(logOutOutput);
         }
 
     }
