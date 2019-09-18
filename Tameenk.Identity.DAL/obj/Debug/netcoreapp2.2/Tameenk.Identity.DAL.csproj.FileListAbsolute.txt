@@ -53,3 +53,14 @@ D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameen
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfo.cs
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.deps.json
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.runtimeconfig.json
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.runtimeconfig.dev.json
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.csprojAssemblyReference.cache
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfoInputs.cache
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfo.cs
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
+C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
