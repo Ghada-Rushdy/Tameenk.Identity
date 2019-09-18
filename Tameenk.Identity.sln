@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tameenk.Identity.DAL", "Tam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tameenk.Identity.Individual.Component", "Tameenk.Identity.Individual.Component\Tameenk.Identity.Individual.Component.csproj", "{D214ECB0-4FF7-42D3-968F-487B3A5CCC91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tameenk.Identity.Log.DAL", "Tameenk.Identity.Log.DAL\Tameenk.Identity.Log.DAL.csproj", "{F8560815-22F7-4A7F-9FA6-6E525315BC9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D214ECB0-4FF7-42D3-968F-487B3A5CCC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D214ECB0-4FF7-42D3-968F-487B3A5CCC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D214ECB0-4FF7-42D3-968F-487B3A5CCC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8560815-22F7-4A7F-9FA6-6E525315BC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8560815-22F7-4A7F-9FA6-6E525315BC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8560815-22F7-4A7F-9FA6-6E525315BC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8560815-22F7-4A7F-9FA6-6E525315BC9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

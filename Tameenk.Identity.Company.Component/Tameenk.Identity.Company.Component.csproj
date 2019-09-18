@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Mapping\**" />
+    <EmbeddedResource Remove="Mapping\**" />
+    <None Remove="Mapping\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="IdentityModel" Version="4.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.2.0" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.5.0" />
@@ -13,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tameenk.Identity.DAL\Tameenk.Identity.DAL.csproj" />
+    <ProjectReference Include="..\Tameenk.Identity.Log.DAL\Tameenk.Identity.Log.DAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

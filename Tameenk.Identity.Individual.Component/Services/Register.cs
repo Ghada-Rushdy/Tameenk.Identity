@@ -10,6 +10,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Microsoft.Extensions.Configuration;
+using Tameenk.Identity.Log.DAL;
 
 namespace Tameenk.Identity.Individual.Component
 {
@@ -18,18 +19,32 @@ namespace Tameenk.Identity.Individual.Component
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
+        private IAuthenticationLogRepository _authenticationLogRepository;
 
         public Register(SignInManager<ApplicationUser> signInManager
-            , UserManager<ApplicationUser> userManager, IConfiguration configuration)
+            , UserManager<ApplicationUser> userManager, IConfiguration configuration, IAuthenticationLogRepository authenticationLogRepository)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _configuration = configuration;
+            _authenticationLogRepository = authenticationLogRepository;
+
         }
 
         public async Task<IndividualRegisterOutput> UserRegister(IndividualRegisterModel model)
         {
             IndividualRegisterOutput output = new IndividualRegisterOutput();
+            
+
+            if (model == null)
+            {
+                Log(ErrorCodes.NullRequest, "Model is not valid", model.Email, model.UserName, model.Channel, model.Password);
+
+                output.ErrorCode = IndividualRegisterOutput.ErrorCodes.NullRequest;
+                output.ErrorDescription = "Model is not valid";
+                output.Token = null;
+                return output;
+            }
 
             try
             {
@@ -53,6 +68,9 @@ namespace Tameenk.Identity.Individual.Component
 
                 if (!result.Succeeded)
                 {
+                    Log(ErrorCodes.ServiceError, "User failed to register", model.Email, model.UserName, model.Channel, model.Password);
+
+
                     StringBuilder errorList = new StringBuilder();
                     result.Errors.ToList().ForEach(e => errorList.Append(e.Description + Environment.NewLine));
 
@@ -64,33 +82,14 @@ namespace Tameenk.Identity.Individual.Component
                 }
                 else
                 {
-                    //if (!await SendTwoFactorCodeSmsAsync(user, user.PhoneNumber))
-                    //{
-                    //    output.ErrorCode = IndividualRegisterOutput.ErrorCodes.CanNotSendSMS;
-                    //    output.ErrorDescription = "Can Not Send SMS";
-                    //    output.Token = null;
-
-                    //    return output;
-                    //}
-
                     var registeredUser = await _userManager.FindByEmailAsync(model.Email);
 
                     if (registeredUser != null)
                     {
-                        var claims = new[]
-                            {
-                          new Claim(JwtRegisteredClaimNames.Sub, user.Id),                          
-                          new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                          new Claim(JwtRegisteredClaimNames.AuthTime, DateTime.Now.ToString())
-                        };
+                        Log(ErrorCodes.Success, "User Registered Successfully", model.Email, model.UserName, model.Channel, model.Password);
 
-                        var secrectkey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Tokens:Key"]));
-                        var creds = new SigningCredentials(secrectkey, SecurityAlgorithms.HmacSha256);
-
-                        JwtSecurityToken token = new JwtSecurityToken(_configuration["Tokens:Issuer"],
-                          _configuration["Tokens:Issuer"],
-                          claims,                          
-                          signingCredentials: creds);
+                        GenerateToken generateToken = new GenerateToken(_configuration);
+                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id, user.Email);
 
                         output.ErrorCode = IndividualRegisterOutput.ErrorCodes.Success;
                         output.ErrorDescription = "Registered Successfully";
@@ -100,6 +99,8 @@ namespace Tameenk.Identity.Individual.Component
                     }
                     else
                     {
+                        Log(ErrorCodes.Success, "User Not Found", model.Email, model.UserName, model.Channel, model.Password);
+
                         output.ErrorCode = IndividualRegisterOutput.ErrorCodes.NullResponse;
                         output.ErrorDescription = "Failed to create user";
                         output.Token = null;
@@ -111,6 +112,8 @@ namespace Tameenk.Identity.Individual.Component
             }
             catch (Exception exp)
             {
+                Log(ErrorCodes.Success, "UserRegister through exception", model.Email, model.UserName, model.Channel, model.Password);
+
                 output.ErrorCode = IndividualRegisterOutput.ErrorCodes.MethodException;
                 output.ErrorDescription = "UserRegister through exception";
                 output.Token = null;
@@ -118,6 +121,20 @@ namespace Tameenk.Identity.Individual.Component
                 return output;
             }         
 
+        }
+
+        public void Log(ErrorCodes ErrorCode ,string ErrorDescription , string Email , string UserName , int Channel , string Password )
+        {
+            AuthenticationLog log = new AuthenticationLog();            log.Method = "UserRegister";
+            log.ServerIP = Utilities.GetServerIP();
+            log.CreatedDate = DateTime.Now;
+            log.Channel = Channel;
+            log.ErrorCode = ErrorCode;
+            log.ErrorDescription = ErrorDescription;
+            log.Password = Password;
+            log.Email = Email;
+            log.UserName = UserName;
+            _authenticationLogRepository.Insert(log);
         }
 
         public async Task<bool> SendTwoFactorCodeSmsAsync(ApplicationUser userId, string phoneNumber)
