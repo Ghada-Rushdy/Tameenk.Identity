@@ -88,7 +88,7 @@ namespace Tameenk.Identity.Individual.Component
             }
             catch(Exception exp)
             {
-                Log(ErrorCodes.MethodException, "UserLogin through exception", model.UserName, model.Password, model.Email, model.Channel);
+                Log(ErrorCodes.MethodException, exp.ToString(), model.UserName, model.Password, model.Email, model.Channel);
 
                 output.ErrorCode = LoginOutput.ErrorCodes.MethodException;
                 output.ErrorDescription = "UserLogin through exception";

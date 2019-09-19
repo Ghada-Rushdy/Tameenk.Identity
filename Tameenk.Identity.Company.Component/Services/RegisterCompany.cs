@@ -71,7 +71,6 @@ namespace Tameenk.Identity.Company.Component{    public class RegisterCompany
                     {
                         Log(ErrorCodes.Success, "User Registered Successfully", model);
 
-
                         GenerateToken generateToken = new GenerateToken(_configuration);
                         JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id, user.Email);
 
@@ -95,8 +94,7 @@ namespace Tameenk.Identity.Company.Component{    public class RegisterCompany
             }
             catch (Exception exp)
             {
-                Log(ErrorCodes.MethodException, "UserLogin through exception", model);
-
+                Log(ErrorCodes.MethodException, exp.ToString() , model);
 
                 output.ErrorCode = CompanyRegisterOutput.ErrorCodes.MethodException;
                 output.ErrorDescription = "UserLogin through exception";

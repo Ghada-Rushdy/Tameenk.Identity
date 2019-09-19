@@ -112,7 +112,7 @@ namespace Tameenk.Identity.Individual.Component
             }
             catch (Exception exp)
             {
-                Log(ErrorCodes.Success, "UserRegister through exception", model.Email, model.UserName, model.Channel, model.Password);
+                Log(ErrorCodes.Success, exp.ToString() , model.Email, model.UserName, model.Channel, model.Password);
 
                 output.ErrorCode = IndividualRegisterOutput.ErrorCodes.MethodException;
                 output.ErrorDescription = "UserRegister through exception";

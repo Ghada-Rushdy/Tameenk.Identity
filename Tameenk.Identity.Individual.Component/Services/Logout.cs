@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Tameenk.Identity.DAL;
+using Tameenk.Identity.Log.DAL;
+using ErrorCodes = Tameenk.Identity.Log.DAL.ErrorCodes;
 
 namespace Tameenk.Identity.Individual.Component
 {
@@ -12,17 +13,25 @@ namespace Tameenk.Identity.Individual.Component
     {
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
-        private readonly IConfiguration _configuration;
+        private IAuthenticationLogRepository _authenticationLogRepository;
+        private IHttpContextAccessor _httpContextAccessor;
 
-        public Logout(SignInManager<ApplicationUser> signInManager)
+        public Logout(SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager , IAuthenticationLogRepository authenticationLogRepository
+                      , IHttpContextAccessor httpContextAccessor)
         {
-            _signInManager = signInManager;           
+            _signInManager = signInManager;
+            _userManager = userManager;
+            _authenticationLogRepository = authenticationLogRepository;
+            _httpContextAccessor = httpContextAccessor;
+
         }
 
         public async Task<LogOutOutput> UserLogOut()
         {
             LogOutOutput logOutOutput = new LogOutOutput();
 
+            var userId = _httpContextAccessor.HttpContext.User.Identity.Name;
+            //ApplicationUser user = _userManager.FindByIdAsync(userId);
             try
             {  
                 await _signInManager.SignOutAsync();
@@ -34,8 +43,10 @@ namespace Tameenk.Identity.Individual.Component
 
             }
             catch (Exception exp)
-            {               
-                logOutOutput.ErrorCode = LogOutOutput.ErrorCodes.Success;
+            {
+                //Log(ErrorCodes.MethodException, exp.ToString(), model);
+
+                logOutOutput.ErrorCode = LogOutOutput.ErrorCodes.MethodException;
                 logOutOutput.ErrorDescription = "UserLogOut Through exception";
 
                 return logOutOutput;
@@ -44,5 +55,24 @@ namespace Tameenk.Identity.Individual.Component
 
         }
 
-     }
+
+
+        public void Log(ErrorCodes ErrorCode, string ErrorDescription, ApplicationUser user, int Channel)
+        {
+            AuthenticationLog log = new AuthenticationLog();            log.Method = "LogOut";
+            log.ServerIP = Utilities.GetServerIP();
+            log.CreatedDate = DateTime.Now;
+            log.Channel = Channel;
+            log.ErrorCode = ErrorCode;
+            log.ErrorDescription = ErrorDescription;
+            //log.Password = user.Password;
+            log.Email = user.Email;
+            log.UserName = user.UserName;
+            _authenticationLogRepository.Insert(log);
+        }
+
+
+
+
+    }
  }

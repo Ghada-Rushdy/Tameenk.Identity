@@ -22,15 +22,16 @@ namespace Tameenk.Identity.API.Controllers
         private SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
         private IAuthenticationLogRepository _authenticationLogRepository ;
+        private IHttpContextAccessor _httpContextAccessor;
 
         public AccountController(UserManager<ApplicationUser> userManager  , SignInManager<ApplicationUser> signInManager , IConfiguration configuration,
-                                 IAuthenticationLogRepository authenticationLogRepository )
+                                 IAuthenticationLogRepository authenticationLogRepository, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
             _authenticationLogRepository = authenticationLogRepository;
-
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [AllowAnonymous]
@@ -116,7 +117,7 @@ namespace Tameenk.Identity.API.Controllers
         {
             LogOutOutput logOutOutput = new LogOutOutput();
 
-            Logout logout = new Logout(_signInManager);
+            Logout logout = new Logout(_signInManager , _userManager , _authenticationLogRepository , _httpContextAccessor);
             logOutOutput = await logout.UserLogOut();
 
             return Ok(logOutOutput);
