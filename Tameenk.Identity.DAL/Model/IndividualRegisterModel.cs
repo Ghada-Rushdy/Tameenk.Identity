@@ -29,7 +29,7 @@ namespace Tameenk.Identity.DAL
 
         public List<string> ModelErrors { get; set; }
 
-        public Channel Channel { get; set; }
+        public int Channel { get; set; }
 
         public bool IsValid
         {

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "37a8268d424d479f9137dfcf6c10a5319a89b5e5"
+    "signature": "a9d5a6f7ee970785947affa87c72a49e9c7fed89"
   },
   "compilationOptions": {
     "defines": [
@@ -30,13 +30,44 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
           "Tameenk.Identity.Company.Component": "1.0.0",
           "Tameenk.Identity.DAL": "1.0.0",
-          "Tameenk.Identity.Individual.Component": "1.0.0"
+          "Tameenk.Identity.Individual.Component": "1.0.0",
+          "Tameenk.Identity.Log.DAL": "1.0.0"
         },
         "runtime": {
           "Tameenk.Identity.API.dll": {}
         },
         "compile": {
           "Tameenk.Identity.API.dll": {}
+        }
+      },
+      "AutoMapper/9.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/7.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "IdentityModel/4.0.0": {
@@ -643,11 +674,13 @@
       },
       "Tameenk.Identity.Company.Component/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "IdentityModel": "4.0.0",
           "Microsoft.AspNetCore.Authorization": "2.2.0",
           "Microsoft.IdentityModel.Tokens": "5.5.0",
           "System.IdentityModel.Tokens.Jwt": "5.5.0",
-          "Tameenk.Identity.DAL": "1.0.0"
+          "Tameenk.Identity.DAL": "1.0.0",
+          "Tameenk.Identity.Log.DAL": "1.0.0"
         },
         "runtime": {
           "Tameenk.Identity.Company.Component.dll": {}
@@ -675,6 +708,7 @@
       },
       "Tameenk.Identity.Individual.Component/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Microsoft.AspNetCore.Authorization": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.Extensions.Configuration": "2.2.0",
@@ -682,7 +716,8 @@
           "Microsoft.IdentityModel.Logging": "5.5.0",
           "Microsoft.IdentityModel.Tokens": "5.5.0",
           "System.IdentityModel.Tokens.Jwt": "5.5.0",
-          "Tameenk.Identity.DAL": "1.0.0"
+          "Tameenk.Identity.DAL": "1.0.0",
+          "Tameenk.Identity.Log.DAL": "1.0.0"
         },
         "runtime": {
           "Tameenk.Identity.Individual.Component.dll": {}
@@ -694,6 +729,14 @@
         },
         "compile": {
           "Tameenk.Identity.Individual.Component.dll": {}
+        }
+      },
+      "Tameenk.Identity.Log.DAL/1.0.0": {
+        "runtime": {
+          "Tameenk.Identity.Log.DAL.dll": {}
+        },
+        "compile": {
+          "Tameenk.Identity.Log.DAL.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3615,6 +3658,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xCqvoxT4HIrNY/xlXG9W+BA/awdrhWvMTKTK/igkGSRbhOhpl3Q8O8Gxlhzjc9JsYqE7sS6AxgyuUUvZ6R5/Bw==",
+      "path": "automapper/9.0.0",
+      "hashPath": "automapper.9.0.0.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-szI4yeRIM7GWe9JyekW0dKYehPB0t6M+I55fPeCebN6PhS7zQZa0eG3bgOnOx+eP3caSNoE7KEJs2rk7MLsh8w==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/7.0.0",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512"
+    },
     "IdentityModel/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3906,6 +3963,11 @@
       "sha512": ""
     },
     "Tameenk.Identity.Individual.Component/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tameenk.Identity.Log.DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5096,7 +5158,7 @@
     "runtime.native.System.Net.Http/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZVuZJqnnegJhd2k/PtAbbIcZ3aZeITq3sj06oKfMBSfphW3HDmk/t4ObvbOk/JA/swGR0LNqMksAh/f7gpTROg==",
+      "sha512": "sha512-guqHgQOK2eUgtJae2VKjNawBn1xjC0hfOt5wASHa60XHbIdCsQlqtvMsFG+3hy7yp88V+gi9fZCjubuDkeakcQ==",
       "path": "runtime.native.system.net.http/4.3.0",
       "hashPath": "runtime.native.system.net.http.4.3.0.nupkg.sha512"
     },
@@ -5131,7 +5193,7 @@
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
+      "sha512": "sha512-Kh9W4agE0r/hK8AX1LvyQI2NrKHBL8pO0gRoDTdDb0LL6Ta1Z2OtFx3lOaAE0ZpCUc/dt9Wzs3rA7a3IsKdOVA==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
@@ -5208,7 +5270,7 @@
     "System.Collections.Specialized/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "sha512-NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
       "path": "system.collections.specialized/4.3.0",
       "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
     },

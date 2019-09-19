@@ -36,6 +36,7 @@
     <ProjectReference Include="..\Tameenk.Identity.Company.Component\Tameenk.Identity.Company.Component.csproj" />
     <ProjectReference Include="..\Tameenk.Identity.DAL\Tameenk.Identity.DAL.csproj" />
     <ProjectReference Include="..\Tameenk.Identity.Individual.Component\Tameenk.Identity.Individual.Component.csproj" />
+    <ProjectReference Include="..\Tameenk.Identity.Log.DAL\Tameenk.Identity.Log.DAL.csproj" />
   </ItemGroup>
 
 </Project>

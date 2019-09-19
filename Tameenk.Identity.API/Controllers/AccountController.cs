@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Tameenk.Identity.Company.Component;
 using Tameenk.Identity.DAL;
 using Tameenk.Identity.Individual.Component;
+using Tameenk.Identity.Log.DAL;
 
 namespace Tameenk.Identity.API.Controllers
 {
@@ -20,12 +21,17 @@ namespace Tameenk.Identity.API.Controllers
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
+        private IAuthenticationLogRepository _authenticationLogRepository ;
+        private IHttpContextAccessor _httpContextAccessor;
 
-        public AccountController(UserManager<ApplicationUser> userManager  , SignInManager<ApplicationUser> signInManager , IConfiguration configuration)
+        public AccountController(UserManager<ApplicationUser> userManager  , SignInManager<ApplicationUser> signInManager , IConfiguration configuration,
+                                 IAuthenticationLogRepository authenticationLogRepository, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
+            _authenticationLogRepository = authenticationLogRepository;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [AllowAnonymous]
@@ -37,7 +43,7 @@ namespace Tameenk.Identity.API.Controllers
 
             if (ModelState.IsValid)
             {
-                Login userLogin = new Login(_signInManager, _userManager , _configuration);
+                Login userLogin = new Login(_signInManager, _userManager , _configuration, _authenticationLogRepository);
 
                 loginOutput = await userLogin.UserLogin(model);
 
@@ -62,7 +68,7 @@ namespace Tameenk.Identity.API.Controllers
 
             if (model.IsValid)
             {
-                Register registerUser = new Register(_signInManager, _userManager , _configuration);
+                Register registerUser = new Register(_signInManager, _userManager , _configuration , _authenticationLogRepository);
                 output = await registerUser.UserRegister(model);
 
                 return Ok(output);
@@ -87,7 +93,7 @@ namespace Tameenk.Identity.API.Controllers
 
             if (model.IsValid)
             {
-                RegisterCompany registerUser = new RegisterCompany(_signInManager, _userManager , _configuration);
+                RegisterCompany registerUser = new RegisterCompany(_signInManager, _userManager, _configuration, _authenticationLogRepository);
                 output = await registerUser.UserRegister(model);
 
                 return Ok(output);
@@ -107,10 +113,14 @@ namespace Tameenk.Identity.API.Controllers
         [HttpPost]
         [Route("LogoutUser")]
         [AllowAnonymous]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> LogoutUser()
         {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "User");
+            LogOutOutput logOutOutput = new LogOutOutput();
+
+            Logout logout = new Logout(_signInManager , _userManager , _authenticationLogRepository , _httpContextAccessor);
+            logOutOutput = await logout.UserLogOut();
+
+            return Ok(logOutOutput);
         }
 
     }
