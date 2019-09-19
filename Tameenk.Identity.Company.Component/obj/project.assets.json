@@ -4735,23 +4735,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Legion\\.nuget\\packages\\": {},
+    "C:\\Users\\Mai\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
+      "projectUniqueName": "C:\\Users\\Mai\\Desktop\\SSO\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
       "projectName": "Tameenk.Identity.Company.Component",
-      "projectPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
-      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Company.Component\\obj\\",
+      "projectPath": "C:\\Users\\Mai\\Desktop\\SSO\\Tameenk.Identity.Company.Component\\Tameenk.Identity.Company.Component.csproj",
+      "packagesPath": "C:\\Users\\Mai\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mai\\Desktop\\SSO\\Tameenk.Identity.Company.Component\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mai\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4764,8 +4764,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj": {
-              "projectPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj"
+            "C:\\Users\\Mai\\Desktop\\SSO\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj": {
+              "projectPath": "C:\\Users\\Mai\\Desktop\\SSO\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj"
             }
           }
         }
