@@ -48,7 +48,6 @@ D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameen
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\bin\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.csprojAssemblyReference.cache
-D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.csproj.CoreCompileInputs.cache
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfoInputs.cache
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfo.cs
 D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
