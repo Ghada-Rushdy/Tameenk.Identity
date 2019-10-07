@@ -76,7 +76,6 @@ D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\net
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.Resources.VerificationCodeResource.resources
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.Resources.VerificationCodeResource.Ar.resources
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csproj.GenerateResource.cache
-D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csproj.CoreCompileInputs.cache
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.AssemblyInfoInputs.cache
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.AssemblyInfo.cs
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Ar\Tameenk.Identity.Individual.Component.resources.dll
@@ -103,3 +102,6 @@ C:\Users\Mai\Desktop\SSO\Tameenk.Identity.Individual.Component\bin\Debug\netcore
 C:\Users\Mai\Desktop\SSO\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Log.DAL.dll.config
 C:\Users\Mai\Desktop\SSO\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Ar\Tameenk.Identity.Individual.Component.resources.dll
 C:\Users\Mai\Desktop\SSO\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csproj.CopyComplete
+D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Log.DAL.dll
+D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Log.DAL.pdb
+D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Log.DAL.dll.config
