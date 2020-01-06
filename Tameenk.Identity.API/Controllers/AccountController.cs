@@ -123,5 +123,14 @@ namespace Tameenk.Identity.API.Controllers
             return Ok(logOutOutput);
         }
 
+
+        [HttpPost]
+        [Route("GetUser")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetUser(string id)
+        {
+            return Ok(await _userManager.FindByIdAsync(id));
+        }
+
     }
 }
