@@ -10,8 +10,8 @@ using Tameenk.Identity.Log.DAL;
 namespace Tameenk.Identity.Log.DAL.Migrations
 {
     [DbContext(typeof(LogContext))]
-    [Migration("20190918125157_updateDB3")]
-    partial class updateDB3
+    [Migration("20200415101200_create")]
+    partial class create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace Tameenk.Identity.Log.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Channel");
+                    b.Property<int?>("Channel");
 
                     b.Property<string>("CompanyCrNumber");
 

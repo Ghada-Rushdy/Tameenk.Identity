@@ -63,3 +63,5 @@ C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Id
 C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.AssemblyInfo.cs
 C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.dll
 C:\Users\Mai\Desktop\SSO\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.pdb
+D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.csproj.CoreCompileInputs.cache
+D:\Projects\Tameenk.Identity\Tameenk.Identity.DAL\obj\Debug\netcoreapp2.2\Tameenk.Identity.DAL.genruntimeconfig.cache

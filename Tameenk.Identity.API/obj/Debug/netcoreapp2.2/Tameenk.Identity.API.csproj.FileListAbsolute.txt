@@ -192,3 +192,5 @@ D:\Projects\Tameenk.Identity\Tameenk.Identity.API\obj\Debug\netcoreapp2.2\Razor\
 D:\Projects\Tameenk.Identity\Tameenk.Identity.API\obj\Debug\netcoreapp2.2\Razor\Views\User\Privacy.cshtml.g.cs
 D:\Projects\Tameenk.Identity\Tameenk.Identity.API\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
 D:\Projects\Tameenk.Identity\Tameenk.Identity.API\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Projects\Tameenk.Identity\Tameenk.Identity.API\obj\Debug\netcoreapp2.2\Tameenk.Identity.API.csproj.CoreCompileInputs.cache
+D:\Projects\Tameenk.Identity\Tameenk.Identity.API\obj\Debug\netcoreapp2.2\Tameenk.Identity.API.genruntimeconfig.cache

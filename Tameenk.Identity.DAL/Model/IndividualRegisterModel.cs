@@ -26,10 +26,8 @@ namespace Tameenk.Identity.DAL
         public string Password { get; set; }
 
         public bool IsCompany { get; set; }
-
-        public List<string> ModelErrors { get; set; }
-
-        public int Channel { get; set; }
+        public new int Channel { get; set; }
+        public List<string> ModelErrors { get; set; }       
 
         public bool IsValid
         {

@@ -37,7 +37,7 @@ namespace Tameenk.Identity.API.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("LoginUser")]
-        public async Task<IActionResult> LoginUser([FromBody] LoginModel model)
+        public async Task<IActionResult> LoginUser([FromBody]LoginModel model)
         {
             LoginOutput loginOutput = new LoginOutput();
 

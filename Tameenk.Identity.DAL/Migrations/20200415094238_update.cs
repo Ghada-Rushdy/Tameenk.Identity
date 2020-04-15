@@ -1,31 +1,31 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Tameenk.Identity.Log.DAL.Migrations
+namespace Tameenk.Identity.DAL.Migrations
 {
-    public partial class updateDB : Migration
+    public partial class update : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "Password",
-                table: "AuthenticationLogs",
+                name: "Channel",
+                table: "AspNetUsers",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "UserName",
-                table: "AuthenticationLogs",
+                name: "FullName",
+                table: "AspNetUsers",
                 nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Password",
-                table: "AuthenticationLogs");
+                name: "Channel",
+                table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "UserName",
-                table: "AuthenticationLogs");
+                name: "FullName",
+                table: "AspNetUsers");
         }
     }
 }

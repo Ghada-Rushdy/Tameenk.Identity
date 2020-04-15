@@ -87,3 +87,4 @@ C:\Users\Mai\Desktop\SSO\Tameenk.Identity.Company.Component\obj\Debug\netcoreapp
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Company.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Log.DAL.dll
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Company.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Log.DAL.pdb
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Company.Component\bin\Debug\netcoreapp2.2\Tameenk.Identity.Log.DAL.dll.config
+D:\Projects\Tameenk.Identity\Tameenk.Identity.Company.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Company.Component.csproj.CoreCompileInputs.cache

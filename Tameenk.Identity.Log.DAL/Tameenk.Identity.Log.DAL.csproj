@@ -132,29 +132,13 @@
   <ItemGroup>
     <Compile Include="Entites\AuthenticationLog.cs" />
     <Compile Include="Enum\ErrorCodes.cs" />
-    <Compile Include="Migrations\20190917152249_test.cs" />
-    <Compile Include="Migrations\20190917152249_test.designer.cs">
-      <DependentUpon>20190917152249_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20190918093520_updateDB.cs" />
-    <Compile Include="Migrations\20190918093520_updateDB.designer.cs">
-      <DependentUpon>20190918093520_updateDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20190918121952_updateDB2.cs" />
-    <Compile Include="Migrations\20190918121952_updateDB2.designer.cs">
-      <DependentUpon>20190918121952_updateDB2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20190918125157_updateDB3.cs" />
-    <Compile Include="Migrations\20190918125157_updateDB3.designer.cs">
-      <DependentUpon>20190918125157_updateDB3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20190918131629_updateDB4.cs" />
-    <Compile Include="Migrations\20190918131629_updateDB4.designer.cs">
-      <DependentUpon>20190918131629_updateDB4.cs</DependentUpon>
+    <Compile Include="Migrations\20200415101200_create.cs" />
+    <Compile Include="Migrations\20200415101200_create.designer.cs">
+      <DependentUpon>20200415101200_create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LogContextModelSnapshot.cs" />
     <Compile Include="Model\AuthenticationLogModel.cs" />
-    <Compile Include="Model\LogContext.cs" />
+    <Compile Include="LogContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Abstractions\IAuthenticationLogRepository.cs" />
     <Compile Include="Repository\Generic\GenericRepository.cs" />

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Tameenk.Identity.Log.DAL.Migrations
 {
-    public partial class test : Migration
+    public partial class create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,8 +19,14 @@ namespace Tameenk.Identity.Log.DAL.Migrations
                     ErrorDescription = table.Column<string>(nullable: true),
                     Method = table.Column<string>(nullable: true),
                     ServerIP = table.Column<string>(nullable: true),
-                    Channel = table.Column<int>(nullable: false),
-                    Email = table.Column<string>(nullable: true)
+                    Channel = table.Column<int>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    UserName = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true),
+                    CompanyName = table.Column<string>(nullable: true),
+                    CompanyCrNumber = table.Column<string>(nullable: true),
+                    CompanyVatNumber = table.Column<string>(nullable: true),
+                    CompanySponserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
