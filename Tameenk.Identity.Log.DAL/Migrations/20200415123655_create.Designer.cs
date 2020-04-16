@@ -10,7 +10,7 @@ using Tameenk.Identity.Log.DAL;
 namespace Tameenk.Identity.Log.DAL.Migrations
 {
     [DbContext(typeof(LogContext))]
-    [Migration("20200415101200_create")]
+    [Migration("20200415123655_create")]
     partial class create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

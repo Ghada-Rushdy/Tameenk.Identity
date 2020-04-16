@@ -10,8 +10,8 @@ using Tameenk.Identity.DAL;
 namespace Tameenk.Identity.DAL.Migrations
 {
     [DbContext(typeof(AuthenticationContext))]
-    [Migration("20200415094238_update")]
-    partial class update
+    [Migration("20200415123359_create")]
+    partial class create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

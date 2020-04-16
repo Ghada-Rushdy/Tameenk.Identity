@@ -132,9 +132,9 @@
   <ItemGroup>
     <Compile Include="Entites\AuthenticationLog.cs" />
     <Compile Include="Enum\ErrorCodes.cs" />
-    <Compile Include="Migrations\20200415101200_create.cs" />
-    <Compile Include="Migrations\20200415101200_create.designer.cs">
-      <DependentUpon>20200415101200_create.cs</DependentUpon>
+    <Compile Include="Migrations\20200415123655_create.cs" />
+    <Compile Include="Migrations\20200415123655_create.designer.cs">
+      <DependentUpon>20200415123655_create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LogContextModelSnapshot.cs" />
     <Compile Include="Model\AuthenticationLogModel.cs" />
