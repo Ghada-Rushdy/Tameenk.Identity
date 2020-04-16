@@ -4802,23 +4802,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Adel\\.nuget\\packages\\": {},
+    "C:\\Users\\Legion\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Ghada\\Tameenk.Identity\\Tameenk.Identity.Individual.Component\\Tameenk.Identity.Individual.Component.csproj",
+      "projectUniqueName": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Individual.Component\\Tameenk.Identity.Individual.Component.csproj",
       "projectName": "Tameenk.Identity.Individual.Component",
-      "projectPath": "C:\\Ghada\\Tameenk.Identity\\Tameenk.Identity.Individual.Component\\Tameenk.Identity.Individual.Component.csproj",
-      "packagesPath": "C:\\Users\\Adel\\.nuget\\packages\\",
-      "outputPath": "C:\\Ghada\\Tameenk.Identity\\Tameenk.Identity.Individual.Component\\obj\\",
+      "projectPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Individual.Component\\Tameenk.Identity.Individual.Component.csproj",
+      "packagesPath": "C:\\Users\\Legion\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Individual.Component\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Adel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Legion\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4831,11 +4831,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Ghada\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj": {
-              "projectPath": "C:\\Ghada\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj"
+            "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj": {
+              "projectPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.DAL\\Tameenk.Identity.DAL.csproj"
             },
-            "C:\\Ghada\\Tameenk.Identity\\Tameenk.Identity.Log.DAL\\Tameenk.Identity.Log.DAL.csproj": {
-              "projectPath": "C:\\Ghada\\Tameenk.Identity\\Tameenk.Identity.Log.DAL\\Tameenk.Identity.Log.DAL.csproj"
+            "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Log.DAL\\Tameenk.Identity.Log.DAL.csproj": {
+              "projectPath": "D:\\Projects\\Tameenk.Identity\\Tameenk.Identity.Log.DAL\\Tameenk.Identity.Log.DAL.csproj"
             }
           }
         }
@@ -4898,7 +4898,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

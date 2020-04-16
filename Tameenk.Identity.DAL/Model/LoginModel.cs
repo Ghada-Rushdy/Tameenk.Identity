@@ -9,8 +9,7 @@ namespace Tameenk.Identity.DAL
     [JsonObject("login")]
     public class LoginModel: BaseModel
     {
-        [JsonProperty("username")]
-        [JsonRequired]
+        [JsonProperty("username")]     
         public string UserName { get; set; }
 
         [JsonProperty("password")]
