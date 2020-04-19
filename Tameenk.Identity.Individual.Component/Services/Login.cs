@@ -54,9 +54,8 @@ namespace Tameenk.Identity.Individual.Component
                     {
                         Log(ErrorCodes.Success, "Success authenticated User", model.UserName , model.Password , model.Email , model.Channel);
 
-
                         GenerateToken generateToken = new GenerateToken(_configuration);
-                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id,user.Email);
+                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id,user.Email,user.UserName);
 
                         output.ErrorCode = LoginOutput.ErrorCodes.Success;
                         output.ErrorDescription = "Success authenticated User";

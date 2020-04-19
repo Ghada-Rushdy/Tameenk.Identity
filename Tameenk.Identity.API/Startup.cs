@@ -17,12 +17,14 @@ namespace Tameenk.Identity.API
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -56,6 +58,19 @@ namespace Tameenk.Identity.API
 
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .AllowCredentials()
+                            .WithOrigins("http://localhost:4200");
+                });
+            });
+
             services.AddScoped<IAuthenticationLogRepository, AuthenticationLogRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
@@ -70,7 +85,7 @@ namespace Tameenk.Identity.API
             }
 
             app.UseAuthentication();
-
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseMvc();
         }
     }

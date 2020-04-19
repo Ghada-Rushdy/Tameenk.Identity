@@ -72,7 +72,7 @@ namespace Tameenk.Identity.Company.Component{    public class RegisterCompany
                         Log(ErrorCodes.Success, "User Registered Successfully", model);
 
                         GenerateToken generateToken = new GenerateToken(_configuration);
-                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id, user.Email);
+                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id, user.Email,user.UserName);
 
                         output.ErrorCode = CompanyRegisterOutput.ErrorCodes.Success;
                         output.ErrorDescription = "Registered Successfully";

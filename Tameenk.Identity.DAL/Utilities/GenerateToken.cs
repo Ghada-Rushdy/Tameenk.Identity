@@ -17,12 +17,13 @@ namespace Tameenk.Identity.DAL
             _configuration = configuration;
         }
 
-        public JwtSecurityToken GenerateTokenJWT(string ID, string Email)
+        public JwtSecurityToken GenerateTokenJWT(string ID, string Email, string userName)
         {
             var claims = new[]
                        {
                           new Claim(JwtRegisteredClaimNames.Sub, ID),
                           new Claim(JwtRegisteredClaimNames.Email, Email),
+                          new Claim(JwtRegisteredClaimNames.UniqueName, userName),
                           new Claim(JwtRegisteredClaimNames.AuthTime, DateTime.Now.ToString())
                         };
 
@@ -32,6 +33,7 @@ namespace Tameenk.Identity.DAL
             JwtSecurityToken token = new JwtSecurityToken(_configuration["Tokens:Issuer"],
               _configuration["Tokens:Issuer"],
               claims,
+              expires: DateTime.Now.AddMinutes(120),
               signingCredentials: creds);
 
             return token;

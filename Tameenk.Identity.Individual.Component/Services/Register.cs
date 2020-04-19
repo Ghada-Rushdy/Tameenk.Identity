@@ -74,7 +74,7 @@ namespace Tameenk.Identity.Individual.Component
                     StringBuilder errorList = new StringBuilder();
                     result.Errors.ToList().ForEach(e => errorList.Append(e.Description + Environment.NewLine));
 
-                    output.ErrorCode = IndividualRegisterOutput.ErrorCodes.Success;
+                    output.ErrorCode = IndividualRegisterOutput.ErrorCodes.NullResponse;
                     output.ErrorDescription = "Can not create user, " + errorList.ToString();
                     output.Token = null;
 
@@ -89,7 +89,7 @@ namespace Tameenk.Identity.Individual.Component
                         Log(ErrorCodes.Success, "User Registered Successfully", model.Email, model.UserName, model.Channel, model.Password);
 
                         GenerateToken generateToken = new GenerateToken(_configuration);
-                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id, user.Email);
+                        JwtSecurityToken token = generateToken.GenerateTokenJWT(user.Id, user.Email,user.UserName);
 
                         output.ErrorCode = IndividualRegisterOutput.ErrorCodes.Success;
                         output.ErrorDescription = "Registered Successfully";

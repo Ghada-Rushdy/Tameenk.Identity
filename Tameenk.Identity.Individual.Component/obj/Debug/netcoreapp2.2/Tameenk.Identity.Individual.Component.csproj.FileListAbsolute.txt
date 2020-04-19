@@ -126,4 +126,3 @@ D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\net
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.csproj.CopyComplete
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.dll
 D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Tameenk.Identity.Individual.Component.pdb
-D:\Projects\Tameenk.Identity\Tameenk.Identity.Individual.Component\obj\Debug\netcoreapp2.2\Ar\Tameenk.Identity.Individual.Component.resources.cs
