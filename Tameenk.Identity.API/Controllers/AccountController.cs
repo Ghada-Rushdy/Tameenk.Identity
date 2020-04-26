@@ -124,7 +124,7 @@ namespace Tameenk.Identity.API.Controllers
         }
 
 
-        [HttpPost]
+        [HttpGet]
         [Route("GetUser")]
         [AllowAnonymous]
         public async Task<IActionResult> GetUser(string id)
